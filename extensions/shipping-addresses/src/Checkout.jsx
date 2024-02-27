@@ -36,9 +36,9 @@ function Extension() {
   // Parse the string address into JSON
   const address_str = shipping && shipping.length > 0 ? shipping[0]?.metafield?.value: '{}';
   const address_json = JSON.parse(address_str);
-//  for (const key in address_json) {
-//    console.log(key, address_json[key]);
-//  }
+  for (const key in address_json) {
+    console.log(key, address_json[key]);
+  }
   var i = Object.keys(address_json).length;
 
   const shippingAddress = useShippingAddress();
